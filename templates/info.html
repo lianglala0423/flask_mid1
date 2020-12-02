@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block MainContainer %}
+    <!-- <p>這裡是基本資料</p> -->
+    {% for member in members %}
+    <p>
+        姓名：{{ member.username }} <br />
+        年齡：{{ member.age }} <br />
+        生日：{{ member.birth }} <br />
+        興趣：{{ member.interest }} 
+    </p>
+    {% endfor %}
+
+    
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block MainContainer %}
+    {% for photo in photos %}
+    <p>
+        姓名：{{ photo.username }} <br />
+        <img src={{ url_for('static', filename=photo.filename)}} alt="mozilla firefox" width="300">
+    </p>
+    {% endfor %}
+        
+    
+{% endblock %}
