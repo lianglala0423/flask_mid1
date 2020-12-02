@@ -11,33 +11,33 @@ def index():
 def info():
     members = [{
         'username': '梁思婕',
-        'age': 18,
+        'age': 27,
         'birth': '04.23',
-        'interest': 'Take beautiful pictures~'
+        'interest': 'Take beautiful pictures & 算命~'
     },
     {
-        'username': '余子悠',
-        'age': 18,
-        'birth': '04.22',
-        'interest': 'Yoga~'
+        'username': '俞子悠',
+        'age': 26,
+        'birth': '03.23',
+        'interest': 'Yoga & 打手遊 ~'
     },
     {
         'username': '李家名',
-        'age': 18,
+        'age': 35,
         'birth': '04.22',
         'interest': '寫作業~'
     },
     {
         'username': '陳昱辰',
-        'age': 18,
+        'age': 30,
         'birth': '04.22',
         'interest': '貸款~'
     },
     {
         'username': '陳昱齊',
-        'age': 18,
-        'birth': '04.22',
-        'interest': 'EFK~'
+        'age': 26,
+        'birth': '07.20',
+        'interest': 'EFK and Work~'
     }
     ]
     return render_template('info.html', members = members)
@@ -63,10 +63,10 @@ def photo():
         },
         {
             'username': '陳昱齊',
-            'filename': 'images/77.png'
+            'filename': 'images/77_2.png'
         }
     ]
     return render_template('photo.html', photos = photos)
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

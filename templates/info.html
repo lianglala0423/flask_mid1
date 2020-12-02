@@ -2,14 +2,31 @@
 
 {% block MainContainer %}
     <!-- <p>這裡是基本資料</p> -->
-    {% for member in members %}
-    <p>
-        姓名：{{ member.username }} <br />
-        年齡：{{ member.age }} <br />
-        生日：{{ member.birth }} <br />
-        興趣：{{ member.interest }} 
-    </p>
-    {% endfor %}
 
+    <style>
+    .card {
+      border-style: solid;
+      border-width: 3px;
+      border-color:rgb(192, 215, 216);  
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+    </style>
     
+    {% for member in members %}
+    <div class="card">
+        <h4 class="mb name">姓名：{{ member.username }} </h4> 
+        <div class="mb info">
+            <p>
+                年齡：{{ member.age }} <br/>
+                生日：{{ member.birth }} <br />
+                興趣：{{ member.interest }} 
+            </p>
+        </div>
+        <div class="button mb"> 
+            <button class="btn btn-1">Chat</button> 
+            <button class="btn btn-2">Follow</button> </div>
+        </br>
+    </div>
+    {% endfor %}
 {% endblock %}

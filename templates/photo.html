@@ -1,11 +1,22 @@
 {% extends 'base.html' %}
 
 {% block MainContainer %}
+    <style>
+        .card {
+        border-style: solid;
+        border-width: 3px;
+        border-color:rgb(192, 215, 216);  
+        margin-bottom: 10px;
+        padding-left: 10px;
+        }
+    </style>
     {% for photo in photos %}
+    <div class="card">
     <p>
         姓名：{{ photo.username }} <br />
         <img src={{ url_for('static', filename=photo.filename)}} alt="mozilla firefox" width="300">
     </p>
+    </div>
     {% endfor %}
         
     
